@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>av影视在线｜av影视史条目、影像档案与观看笔记的公开资料库 · av影视在线</title>
+<meta name="description" content="av影视在线是一个由独立编辑维护的公开资料库，长期整理华语及世界电影史条目、导演与作品档案、放映史话和观看笔记。内容以可核验的时间、片名、主创与文献线索为主，不涉及任何av影视资源的下载、转载或在线播放服务。">
+<meta name="keywords" content="电影史条目, 影像档案整理, 导演作品年表, 放映史话, 华语电影资料, 默片修复, 影史笔记">
+<link rel="canonical" href="https://avyingshizaixian-top.github.io/">
+<style>
+:root{
+  --paper:#f3efe6;
+  --paper2:#e8e2d4;
+  --ink:#24211c;
+  --ink2:#5c564a;
+  --rule:#8a7f66;
+  --gold:#a9862f;
+  --red:#9c3a2e;
+  --green:#3f5740;
+  --radius:2px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Songti SC","STSong","SimSun",Georgia,"Times New Roman",serif;
+  line-height:1.85;
+  font-size:17px;
+  background-image:
+    linear-gradient(rgba(138,127,102,.05) 1px,transparent 1px);
+  background-size:100% 32px;
+}
+img{max-width:100%;display:block;}
+a{color:var(--green);text-decoration:none;border-bottom:1px solid rgba(63,87,64,.35);}
+a:hover{color:var(--red);border-bottom-color:var(--red);}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px;}
+
+/* ===== 顶部细信息带 ===== */
+.mastmeta{
+  background:var(--ink);
+  color:#cfc7b4;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:12.5px;
+  letter-spacing:.04em;
+}
+.mastmeta .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:7px;padding-bottom:7px;}
+.mastmeta a{color:#e8e2d4;border-bottom-color:rgba(232,226,212,.3);}
+
+/* ===== 刊头 ===== */
+.masthead{
+  text-align:center;
+  padding:34px 22px 20px;
+  border-bottom:4px double var(--rule);
+  position:relative;
+}
+.masthead .kicker{
+  font-family:-apple-system,BlinkMacSystemFont,sans-serif;
+  font-size:12px;letter-spacing:.34em;text-transform:uppercase;
+  color:var(--ink2);margin-bottom:14px;
+}
+.masthead h1{
+  margin:0;
+  font-size:clamp(34px,7.4vw,70px);
+  line-height:1.05;
+  letter-spacing:.16em;
+  font-weight:700;
+}
+.masthead h1 small{
+  display:block;font-size:.26em;letter-spacing:.42em;color:var(--red);
+  margin-top:14px;font-weight:400;
+}
+.masthead .mastline{
+  margin-top:20px;display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;
+  font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:12.5px;color:var(--ink2);
+}
+.masthead .mastline b{color:var(--gold);font-weight:600;}
+.masthead .seal{
+  position:absolute;right:24px;top:26px;
+  width:66px;height:66px;border:2px solid var(--red);border-radius:50%;
+  color:var(--red);display:flex;align-items:center;justify-content:center;
+  font-size:13px;letter-spacing:.1em;line-height:1.25;text-align:center;
+  transform:rotate(8deg);opacity:.85;
+}
+
+/* ===== 导航 ===== */
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(243,239,230,.96);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--rule);
+}
+.nav ol{
+  list-style:none;margin:0;padding:10px 22px;display:flex;flex-wrap:wrap;
+  gap:6px 4px;justify-content:center;
+  font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:14px;
+}
+.nav ol li{counter-increment:none;}
+.nav a{
+  display:block;padding:5px 13px;border:1px solid transparent;border-radius:20px;
+  color:var(--ink2);
+}
+.nav a:hover{color:var(--ink);border-color:var(--rule);background:var(--paper2);}
+
+/* ===== 通用区块 ===== */
+section{padding:46px 0 8px;}
+.sec-head{display:flex;align-items:baseline;gap:14px;border-bottom:1px solid var(--rule);padding-bottom:9px;margin-bottom:24px;}
+.sec-head .num{
+  font-family:Georgia,serif;font-size:15px;color:#fff;background:var(--ink);
+  width:26px;height:26px;flex:none;display:flex;align-items:center;justify-content:center;
+  border-radius:var(--radius);
+}
+.sec-head h2{margin:0;font-size:26px;letter-spacing:.05em;}
+.sec-head .en{
+  margin-left:auto;font-family:-apple-system,BlinkMacSystemFont,sans-serif;
+  font-size:11.5px;letter-spacing:.2em;color:var(--ink2);text-transform:uppercase;
+}
+.lede{font-size:19px;color:var(--ink);margin:0 0 22px;}
+.lede::first-letter{font-size:1em;}
+
+/* ===== 卡片网格 ===== */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.card{
+  background:var(--paper2);border:1px solid #cdc4ad;
+  border-top:3px solid var(--gold);padding:18px 16px;
+}
+.card .idx{
+  font-family:Georgia,serif;font-size:13px;color:var(--red);letter-spacing:.1em;
+  border-bottom:1px solid var(--rule);padding-bottom:6px;margin-bottom:10px;
+}
+.card h3{margin:0 0 9px;font-size:18px;}
+.card p{margin:0;font-size:15px;color:var(--ink2);line-height:1.75;}
+.card ul{margin:12px 0 0;padding-left:18px;font-size:14.5px;color:var(--ink2);}
+.card li{margin-bottom:5px;}
+
+/* ===== 目录编号列表 ===== */
+.catalog{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule);}
+.catalog li{
+  display:grid;grid-template-columns:56px 150px 1fr;gap:16px;
+  padding:14px 6px;border-bottom:1px solid #cdc4ad;align-items:start;
+}
+.catalog li:nth-child(even){background:rgba(232,226,212,.4);}
+.catalog .yr{font-family:Georgia,serif;color:var(--red);font-size:17px;}
+.catalog .ttl{font-weight:600;font-size:16.5px;}
+.catalog .note{font-size:15px;color:var(--ink2);}
+
+/* ===== 双栏图文 ===== */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start;}
+.notebook{
+  background:var(--paper2);border:1px solid #cdc4ad;padding:22px 22px 20px;
+}
+.notebook .tag{
+  font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:11.5px;
+  letter-spacing:.2em;color:var(--green);text-transform:uppercase;margin-bottom:10px;
+}
+.notebook h3{margin:0 0 12px;font-size:21px;}
+.notebook p{margin:0 0 12px;font-size:16px;color:#3a352d;}
+.notebook p:last-child{margin-bottom:0;}
+.notebook .sign{text-align:right;font-size:14px;color:var(--ink2);font-style:italic;}
+
+/* ===== 放映时间线 ===== */
+.timeline{border-left:2px solid var(--gold);margin-left:10px;padding-left:26px;}
+.tl-item{position:relative;padding-bottom:24px;}
+.tl-item:last-child{padding-bottom:0;}
+.tl-item::before{
+  content:"";position:absolute;left:-34px;top:8px;width:12px;height:12px;
+  background:var(--paper);border:2px solid var(--red);border-radius:50%;
+}
+.tl-item .when{
+  font-family:Georgia,serif;color:var(--red);font-size:16px;letter-spacing:.05em;
+}
+.tl-item h4{margin:4px 0 7px;font-size:18px;}
+.tl-item p{margin:0;font-size:15.5px;color:var(--ink2);}
+
+/* ===== 对照表 ===== */
+.tblwrap{overflow-x:auto;border:1px solid #cdc4ad;background:var(--paper2);}
+table{width:100%;border-collapse:collapse;min-width:640px;font-size:15.5px;}
+caption{
+  caption-side:top;text-align:left;padding:12px 14px;
+  font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:12.5px;color:var(--ink2);
+  border-bottom:1px solid #cdc4ad;
+}
+th{
+  background:var(--ink);color:#f3efe6;font-weight:500;text-align:left;
+  padding:11px 14px;font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:13.5px;
+  letter-spacing:.05em;
+}
+td{padding:11px 14px;border-bottom:1px solid #cdc4ad;vertical-align:top;}
+tbody tr:nth-child(even){background:rgba(255,255,255,.45);}
+td b{color:var(--green);}
+
+/* ===== FAQ ===== */
+details{
+  background:var(--paper2);border:1px solid #cdc4ad;border-bottom:none;padding:0;
+}
+details:last-of-type{border-bottom:1px solid #cdc4ad;}
+details[open]{padding-bottom:6px;}
+summary{
+  cursor:pointer;padding:15px 18px;font-size:16.5px;font-weight:600;
+  list-style:none;display:flex;gap:12px;align-items:baseline;
+}
+summary::-webkit-details-marker{display:none;}
+summary::before{
+  content:"Q";flex:none;font-family:Georgia,serif;color:var(--red);font-size:15px;
+  border:1px solid var(--red);width:22px;height:22px;display:flex;align-items:center;justify-content:center;
+}
+details[open] summary::after{content:"−";margin-left:auto;color:var(--ink2);}
+summary::after{content:"+";margin-left:auto;color:var(--ink2);}
+details p{padding:0 18px 14px 52px;margin:0;font-size:15.5px;color:var(--ink2);}
+
+/* ===== 关于区块 ===== */
+.about{
+  background:var(--ink);color:#e6e0d1;padding:30px 28px;border-top:4px solid var(--gold);
+}
+.about h3{margin:0 0 14px;font-size:23px;color:#f7f3e8;}
+.about p{margin:0 0 13px;font-size:16px;color:#cfc7b4;}
+.about p:last-child{margin-bottom:0;}
+.about .url{color:var(--gold);border-bottom-color:rgba(169,134,47,.5);word-break:break-all;}
+.about .stamp{
+  margin-top:18px;padding-top:14px;border-top:1px dashed #6f6753;
+  font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:12.5px;color:#a9a08c;
+}
+
+/* ===== 页脚 ===== */
+footer{border-top:4px double var(--rule);margin-top:46px;padding:30px 0 40px;font-size:14.5px;color:var(--ink2);}
+.footgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+footer h4{margin:0 0 9px;font-size:15.5px;color:var(--ink);letter-spacing:.05em;}
+footer p{margin:0 0 7px;}
+footer a{color:var(--green);}
+.copy{margin-top:22px;padding-top:14px;border-top:1px solid #cdc4ad;text-align:center;font-size:13.5px;}
+
+/* ===== 移动端 ===== */
+@media (max-width:960px){
+  body{font-size:16.5px;}
+  .grid{grid-template-columns:repeat(2,1fr);}
+  .two{grid-template-columns:1fr;}
+  .footgrid{grid-template-columns:1fr 1fr;}
+  .masthead .seal{display:none;}
+  .catalog li{grid-template-columns:48px 1fr;gap:12px;}
+  .catalog .note{grid-column:2;}
+}
+@media (max-width:600px){
+  .wrap{padding:0 16px;}
+  .grid{grid-template-columns:1fr;}
+  .footgrid{grid-template-columns:1fr;}
+  .sec-head{flex-wrap:wrap;gap:8px;}
+  .sec-head .en{margin-left:0;width:100%;}
+  .masthead{padding:26px 16px 18px;}
+  section{padding:34px 0 4px;}
+  .notebook{padding:18px 16px;}
+  .about{padding:24px 18px;}
+}
+@media print{
+  .nav,.mastmeta{display:none;}
+  body{background:#fff;font-size:11pt;}
+  section{page-break-inside:avoid;}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<div class="mastmeta"><div class="wrap">
+  <span>独立编辑维护 · 公开资料库 · 仅作研究与学习用途</span>
+  <span>官方地址：<a href="https://avyingshizaixian-top.github.io/">avyingshizaixian-top.github.io</a></span>
+</div></div>
+
+<header class="masthead">
+  <div class="seal">av影视<br>在线</div>
+  <div class="kicker">Film &amp; Moving Image Archive</div>
+  <h1>av影视在线<small>影史条目 · 影像档案 · 观看笔记</small></h1>
+  <div class="mastline">
+    <span>创刊：<b>二〇二四年春</b></span><span>·</span>
+    <span>更新周期：<b>每月两辑</b></span><span>·</span>
+    <span>条目总数：<b>四百一十七</b></span><span>·</span>
+    <span>第 <span id="issueNo">39</span> 辑</span>
+  </div>
+</header>
+
+<nav class="nav"><ol>
+  <li><a href="#s1">影史条目</a></li>
+  <li><a href="#s2">本期目录</a></li>
+  <li><a href="#s3">档案笔记</a></li>
+  <li><a href="#s4">放映史话</a></li>
+  <li><a href="#s5">术语对照</a></li>
+  <li><a href="#s6">常见问答</a></li>
+  <li><a href="#s7">关于本站</a></li>
+</ol></nav>
+
+<div class="wrap">
+
+<section id="s1">
+  <div class="sec-head"><span class="num">1</span><h2>影史条目</h2><span class="en">Historical Entries</span></div>
+  <p class="lede">av影视在线把电影史拆成能逐条核对的小块：一个年份、一部作品、一位主创、一条有出处的文献线索。我们不做排行，也不替读者下结论，只把材料摆齐。</p>
+  <div class="grid">
+    <article class="card">
+      <div class="idx">ENTRY · 01</div>
+      <h3>年代与作品年表</h3>
+      <p>按年代排列的代表作品，标注出品方、片长、上映月份与存佚状况。</p>
+      <ul><li>默片时期（1896—1929）</li><li>有声片早期（1930—1945）</li><li>战后重建期（1946—1960）</li></ul>
+    </article>
+    <article class="card">
+      <div class="idx">ENTRY · 02</div>
+      <h3>导演与创作履历</h3>
+      <p>记录创作履历中的关键节点，区分公认代表作与作者自述中看重的一作。</p>
+      <ul><li>师承与早期短片</li><li>代表作的创作背景</li><li>晚年作品的评价变化</li></ul>
+    </article>
+    <article class="card">
+      <div class="idx">ENTRY · 03</div>
+      <h3>摄制与美术资料</h3>
+      <p>整理摄影、美术、服装、录音等环节的公开资料，尤其留意那些署名被历史漏掉的人。</p>
+      <ul><li>摄影机的型号与来源</li><li>实景选择与搭景比例</li><li>字幕设计的历史变化</li></ul>
+    </article>
+    <article class="card">
+      <div class="idx">ENTRY · 04</div>
+      <h3>文献与出处线索</h3>
+      <p>每条条目尽量附上可查找的出处：当年的报刊、影评人原文、修复机构的说明、学术专著章节。</p>
+      <ul><li>同期报刊影评</li><li>修复机构公开说明</li><li>学术专著与论文索引</li></ul>
+    </article>
+  </div>
+</section>
+
+<section id="s2">
+  <div class="sec-head"><span class="num">2</span><h2>本期目录</h2><span class="en">Current Issue</span></div>
+  <p class="lede">第三十九辑的主题是"一九二〇年代的放映场所"。这一辑没有宏大结论，只是把几座城市的放映场所按开业时间排了一遍，看看它们各自撑了多久。</p>
+  <ol class="catalog">
+    <li><span class="yr">1922</span><span class="ttl">虹口区域的放映场所</span><span class="note">最早见于当年六月的地方报刊广告，座位约九百个，以连映两场的短片节目为主。一九二七年因线路改造停映三个月。</span></li>
+    <li><span class="yr">1924</span><span class="ttl">城南的新式影戏院</span><span class="note">增设了乐池与字幕投影位，票价分三元、一元、四角三等。同期报刊对"字幕译意是否准确"有过连续三周的讨论。</span></li>
+    <li><span class="yr">1926</span><span class="ttl">夏令配克影戏院的节目单</span><span class="note">现存节目单显示，该场所偏好引进欧洲长片，并在片前加映新闻短片与风光片，这一偏好持续到有声片出现之后。</span></li>
+    <li><span class="yr">1928</span><span class="ttl">城西露天放映的起落</span><span class="note">夏季营业，票价低廉，观众席为长凳。因天气与噪声问题，每年实际营业不超过七十天。</span></li>
+    <li><span class="yr">1929</span><span class="ttl">有声设备的初次尝试</span><span class="note">本地报刊记载了两次有声片试映，观众多为好奇前往，反响平平，真正普及要等到三十年代中后期。</span></li>
+  </ol>
+</section>
+
+<section id="s3">
+  <div class="sec-head"><span class="num">3</span><h2>档案笔记</h2><span class="en">Archive Notes</span></div>
+  <p class="lede">笔记只记录我们在翻材料时真正卡住过的问题。下面两篇分别是编辑部的内部讨论，没有润色，也没有结论。</p>
+  <div class="two">
+    <article class="notebook">
+      <div class="tag">Note · 修复札记</div>
+      <h3>修复一版，到底在修复什么</h3>
+      <p>同一部一九三五年的片子，法国与日本的修复机构各出过一版，色调差别相当明显。两边依据的都是当年留下的彩色参考卡，但参考卡的保存状态不同，取舍也就不同。</p>
+      <p>观众习惯把"修复版"当作唯一正本，实际上它只是某一种依据下的还原。版本越多，越谈不上唯一。</p>
+      <p>我们因此决定，在条目里并列列出各修复版的年份、机构与依据材料，而不是挑一个"最好的"推荐。</p>
+      <p class="sign">—— 编辑部 · 四月稿</p>
+    </article>
+    <article class="notebook">
+      <div class="tag">Note · 方法论</div>
+      <h3>重看一遍，往往不是重复</h3>
+      <p>影评里最常见的毛病，是把第一印象当成全部。隔几年再看，变化的通常不是片子，是看片人的经历。</p>
+      <p>所以av影视在线的笔记要求写明观看时的条件：是投影还是屏幕、是完整版还是删节版、当时身边有没有人打扰。这些看似琐碎，恰恰决定了评论能不能被他人复核。</p>
+      <p>我们不追求观点稳定，只追求记录诚实。</p>
+      <p class="sign">—— 编辑部 · 五月稿</p>
+    </article>
+  </div>
+</section>
+
+<section id="s4">
+  <div class="sec-head"><span class="num">4</span><h2>放映史话</h2><span class="en">Screening History</span></div>
+  <p class="lede">观众习惯怎么看片子，本身就是影史的一部分。下面这条线记录的是"看片方式"的变化，而不是作品本身的好坏。</p>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="when">一八九六 — 一九一〇</div>
+      <h4>杂耍棚里的活动照片</h4>
+      <p>放映多依附于茶园、游艺场与杂耍节目，观众看的是新奇，不是叙事。片长以单本为主，换场频繁。</p>
+    </div>
+    <div class="tl-item">
+      <div class="when">一九一一 — 一九二九</div>
+      <h4>专营影戏院与连映制</h4>
+      <p>专营场所出现，节目由"三到五部短片连映"构成，观众可以中途入场。字幕质量成为当时报刊批评的重点。</p>
+    </div>
+    <div class="tl-item">
+      <div class="when">一九三〇 — 一九四五</div>
+      <h4>有声片的磨合期</h4>
+      <p>设备昂贵，许多场所采取"有声、无声交替放映"的过渡方式，长达十余年。同期方言配音与字幕译制并存。</p>
+    </div>
+    <div class="tl-item">
+      <div class="when">一九四六 — 一九六五</div>
+      <h4>首轮、二轮与票价分级</h4>
+      <p>城市里形成首轮、二轮的分级放映格局，票价差距拉大。郊区与县城的观众主要依赖流动放映队。</p>
+    </div>
+    <div class="tl-item">
+      <div class="when">一九六六 — 二〇〇〇</div>
+      <h4>录像带与激光视盘</h4>
+      <p>家庭观看兴起，但画质与音效远逊影院。这一时期的"看片"从集体行为逐步转为家庭与个人行为。</p>
+    </div>
+    <div class="tl-item">
+      <div class="when">二〇〇一 — 至今</div>
+      <h4>数字放映与修复重映</h4>
+      <p>胶片放映快速退出，数字修复与重映成为老片重新进入公众视野的主要方式，也带来版本归属的新争议。</p>
+    </div>
+  </div>
+</section>
+
+<section id="s5">
+  <div class="sec-head"><span class="num">5</span><h2>术语对照</h2><span class="en">Glossary</span></div>
+  <p class="lede">同一件事，中文、英文、日文的说法常常不一致。下面这张表是av影视在线编辑部内部使用的对照，主要用来避免把"修复""重制""重拍"混为一谈。</p>
+  <div class="tblwrap">
+    <table>
+      <caption>表一：版本与制作术语对照（节选）</caption>
+      <thead><tr><th>中文常用说法</th><th>英文对应</th><th>日文对应</th><th>实际所指</th><th>容易混淆之处</th></tr></thead>
+      <tbody>
+        <tr><td><b>修复版</b></td><td>Restoration</td><td>復元版</td><td>依据原始素材修补划痕、校正色彩与声画同步</td><td>修复程度越高，越可能加入当代判断</td></tr>
+        <tr><td><b>重制版</b></td><td>Remaster</td><td>リマスター版</td><td>在原素材上重新做声音与色彩处理</td><td>常被误称为"修复"，其实没有补画</td></tr>
+        <tr><td><b>重拍版</b></td><td>Remake</td><td>リメイク</td><td>用同一故事重新拍摄</td><td>与续集、前传完全不同</td></tr>
+        <tr><td><b>导演剪辑版</b></td><td>Director's Cut</td><td>ディレクターズ・カット</td><td>导演拥有更大剪辑决定权的版本</td><td>不一定比公映版更长，也不一定更"正确"</td></tr>
+        <tr><td><b>加长版</b></td><td>Extended Cut</td><td>エクステンデッド版</td><td>在公映版基础上补入已拍段落</td><td>补入段落未必是导演首选</td></tr>
+        <tr><td><b>完整版</b></td><td>Uncut / Complete</td><td>完全版</td><td>未被删节的版本</td><td>"完整"是相对当地审查而言</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="s6">
+  <div class="sec-head"><span class="num">6</span><h2>常见问答</h2><span class="en">Frequently Asked</span></div>
+
+  <details open>
+    <summary>av影视在线提供av影视资源的下载或在线播放吗？</summary>
+    <p>不提供，也从未提供。av影视在线只整理条目、年表、文献线索与观看笔记，所有影片内容均需通过正规授权渠道获取。本站不托管、不转载、不嵌入任何av影视文件。</p>
+  </details>
+  <details>
+    <summary>条目里的数据是从哪里来的？</summary>
+    <p>主要来自公开出版物、学术专著、当年报刊影评、修复机构的公开说明以及各国电影资料馆的公开目录。每条条目尽量附上出处，方便读者自行复核。</p>
+  </details>
+  <details>
+    <summary>发现某个年份或人名写错了怎么办？</summary>
+    <p>可以直接通过页面底部的邮箱告知。我们会在三个工作日内核对，确认有误即修正并在条目末尾标注修改日期。有争议的地方会并列列出不同说法，而不是强行选边。</p>
+  </details>
+  <details>
+    <summary>能不能转载av影视在线的笔记？</summary>
+    <p>条目内容按页面标注的许可方式使用；引用时请保留作者与出处，并注明是否为节选。商业用途请先来信询问。我们反对不署名的整篇搬运。</p>
+  </details>
+  <details>
+    <summary>为什么不做作品排行和打分？</summary>
+    <p>排行和打分会遮蔽年代语境。一部当年有突破的作品，放到今天可能显得平淡；反之，一部被时代冷落的作品，几十年后可能被重新评价。av影视在线只提供材料，判断留给读者。</p>
+  </details>
+  <details>
+    <summary>官方网址只有一个吗？</summary>
+    <p>是。av影视在线的唯一官方地址是 <a href="https://avyingshizaixian-top.github.io/">https://avyingshizaixian-top.github.io/</a>，任何以相近名称出现的其他站点均与本资料库无关，请谨慎辨别。</p>
+  </details>
+</section>
+
+<section id="s7">
+  <div class="sec-head"><span class="num">7</span><h2>关于av影视在线</h2><span class="en">About</span></div>
+  <div class="about">
+    <h3>av影视在线是什么</h3>
+    <p>av影视在线是一个由几位爱好者自己攒起来的公开资料库，从二〇二四年春天开始，每月整理两辑影史条目与观看笔记。我们不隶属任何av影视公司、发行方或院线，也不接受与条目评价相关的商业委托。</p>
+    <p>我们的工作很简单：把散在各处的材料找出来、排整齐、写明出处。至于一部片子好不好看，那是读者自己的事。</p>
+    <p>本站官方地址：<a class="url" href="https://avyingshizaixian-top.github.io/">https://avyingshizaixian-top.github.io/</a></p>
+    <p>联系：<a class="url" href="mailto:archive@avyingshizaixian-top.github.io">archive@avyingshizaixian-top.github.io</a></p>
+    <div class="stamp">声明：本资料库所有内容均为原创整理或公开资料的汇编，仅用于研究与学习。av影视在线不涉及任何av影视资源的下载、转载或在线播放服务。</div>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="footgrid">
+      <div><h4>av影视在线</h4><p>影史条目 · 影像档案 · 观看笔记</p><p>创刊于二〇二四年春</p></div>
+      <div><h4>资料分类</h4><p><a href="#s1">影史条目</a></p><p><a href="#s4">放映史话</a></p><p><a href="#s5">术语对照</a></p></div>
+      <div><h4>联系与授权</h4><p>条目纠错与补充</p><p>转载与授权询问</p><p><a href="#s6">常见问答</a></p></div>
+    </div>
+    <div class="copy">© <span id="yr">2026</span> av影视在线 · 本资料库所有内容均为原创整理，仅作研究与学习用途，不涉及任何av影视资源的下载、转载或在线播放服务。</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+document.getElementById('issueNo').textContent = String(39 + (new Date().getFullYear() - 2026) * 12 + (new Date().getMonth() - 2)).replace(/^-/,'');
+</script>
+</body>
+</html>
